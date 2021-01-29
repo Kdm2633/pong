@@ -246,9 +246,19 @@ function love.update(dt)
         player2.dy = 0
     end ]]-- 
      if ball.y > player2.dy then
-        player2.y =  ball.y            --math.min(VIRTUAL_HEIGHT - self.height, self.y + self.dy * dt)
+        player2.y =  ball.y  
+        if player1Score <= player2Score -3 then
+            player2.dy = player2.dy - 10
+          else 
+            player2.dy= PADDLE_SPEED
+           end
       else
         player2.y = ball.y
+                if player1Score <= player2Score -3 then
+            player2.dy = player2.dy - 10
+          else 
+            player2.dy= PADDLE_SPEED
+           end
       end
     -- update our ball based on its DX and DY only if we're in play state;
     -- scale the velocity by dt so movement is framerate-independent
