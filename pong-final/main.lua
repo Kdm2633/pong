@@ -59,7 +59,7 @@ function love.load()
     -- means there will be no filtering of pixels (blurriness), which is
     -- important for a nice crisp, 2D look
     love.graphics.setDefaultFilter('nearest', 'nearest')
-
+    love.graphics.clear(40/255,60/255,123/255,255/255)
     -- set the title of our application window
     love.window.setTitle('Pong')
 
