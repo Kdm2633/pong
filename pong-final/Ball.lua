@@ -30,6 +30,15 @@ end
     Expects a paddle as an argument and returns true or false, depending
     on whether their rectangles overlap.
 ]]
+
+function getX()
+    return self.x
+   end 
+
+function getY()
+    return self.y
+   end 
+
 function Ball:collides(paddle)
     -- first, check to see if the left edge of either is farther to the right
     -- than the right edge of the other
@@ -63,5 +72,6 @@ function Ball:update(dt)
 end
 
 function Ball:render()
+    love.graphics.setColor(250/255, 0/255, 0/255, 1)
     love.graphics.rectangle('fill', self.x, self.y, self.width, self.height)
 end
