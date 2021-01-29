@@ -59,4 +59,5 @@ end
 ]]
 function Paddle:render()
     love.graphics.rectangle('fill', self.x, self.y, self.width, self.height)
+    love.graphics.setcolor(50/255,89/255,190/255)
 end
