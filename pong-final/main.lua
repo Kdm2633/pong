@@ -245,10 +245,10 @@ function love.update(dt)
     else
         player2.dy = 0
     end ]]-- 
-     if ball.getY() > player2.dy then
-        player2.y =  ball.getY()              --math.min(VIRTUAL_HEIGHT - self.height, self.y + self.dy * dt)
+     if ball.y > player2.dy then
+        player2.y =  ball.y            --math.min(VIRTUAL_HEIGHT - self.height, self.y + self.dy * dt)
       else
-        player2.y = ball.get()
+        player2.y = ball.y
       end
     -- update our ball based on its DX and DY only if we're in play state;
     -- scale the velocity by dt so movement is framerate-independent
