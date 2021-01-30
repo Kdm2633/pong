@@ -255,7 +255,7 @@ function love.update(dt)
       else
         player2.y = ball.y
                 if player1Score <= player2Score -3 then
-            player2.dy = player2.dy - 10
+            player2.dy = -PADDLE_SPEED
           else 
             player2.dy= PADDLE_SPEED
            end
